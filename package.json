@@ -1,10 +1,10 @@
 {
-  "name": "web-app-zerver",
+  "name": "web-tserver",
   "version": "0.1.0",
   "description": "Server TypeScript module files.",
   "main": "index.js",
   "scripts": {
-    "start": "deno run --watch --allow-env=DENO_DIR,XDG_CACHE_HOME,XDG_DATA_HOME,HOME,DENO_AUTH_TOKENS --allow-net --allow-read app/src/index.ts --directory='test/src'"
+    "start": "deno run --watch --allow-net --allow-read app/src/index.ts --directory='test/src'"
   },
   "author": "Richard L. McNeary II",
   "license": "MIT",
