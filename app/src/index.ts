@@ -4,11 +4,17 @@ import type { ServerState } from "./types.ts";
 import { setFilename } from "./middleware/setFilename.ts";
 import { createFileResponse } from "./middleware/createFileResponse.ts";
 
-const args = parse(Deno.args);
-console.log(`--directory='${args["directory"]}'`);
+async function main() {
+  const args = parse(Deno.args);
+  console.log(`--directory='${args["directory"]}'`);
 
-const app = new Application<ServerState>();
+  const app = new Application<ServerState>();
 
-app.use(setFilename).use(createFileResponse);
+  app.use(setFilename).use(createFileResponse);
 
-await app.listen({ hostname: "0.0.0.0", port: 3000 });
+  await app.listen({ hostname: "0.0.0.0", port: 3000 });
+}
+
+if (import.meta.main) {
+  main();
+}
