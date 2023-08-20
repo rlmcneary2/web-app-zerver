@@ -1,0 +1,18 @@
+{
+  "name": "web-app-zerver",
+  "version": "0.1.0",
+  "description": "Server TypeScript module files.",
+  "main": "index.js",
+  "scripts": {
+    "start": "deno run --watch --allow-env=DENO_DIR,XDG_CACHE_HOME,XDG_DATA_HOME,HOME,DENO_AUTH_TOKENS --allow-net --allow-read app/src/index.ts --directory='test/src'"
+  },
+  "author": "Richard L. McNeary II",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.14.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.47.0",
+    "prettier": "^3.0.2"
+  }
+}
